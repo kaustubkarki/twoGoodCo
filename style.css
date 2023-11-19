@@ -1,0 +1,258 @@
+@font-face {
+  font-family: Futura;
+  src: local("Futura Std");
+}
+*::selection {
+  color: plum;
+  background-color: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gilroy";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #f7f7f7;
+}
+#nav {
+  /* height: 100px; */
+  width: 100%;
+  /* background-color: burlywood; */
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+#nav-part1 {
+  /* background: red;  */
+  height: 82px;
+  overflow: hidden;
+  /* wo */
+}
+#nav-part1 svg {
+  display: block;
+}
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#links {
+  padding: 10px;
+}
+#nav-part2 #links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  margin: 0 20px;
+}
+
+#icons {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #f7f7f7;
+}
+#nav-part2 #icons i {
+  font-size: 18px;
+  margin: 0 20px;
+  font-weight: 100;
+}
+
+#cursor {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: blanchedalmond;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 99;
+  opacity: 0.3;
+}
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  /* padding-top: 15vh 21vw; */
+  padding: 0 1vw;
+  padding-top: 20vh;
+}
+
+#page1 h1 {
+  font-family: Futura;
+  text-transform: uppercase;
+  font-size: 15.4vw;
+  line-height: 14vw;
+  letter-spacing: -8px;
+}
+
+#video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 2%;
+}
+#video-container #play {
+  padding: 3vw 2.3vw;
+  background-color: black;
+  color: #fff;
+  font-size: 1.33vw;
+  text-transform: uppercase;
+  font-family: Futura;
+  position: fixed;
+  z-index: 3;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 1vw;
+}
+
+#page2 .elem {
+  height: 100%;
+  width: 31%;
+  position: relative;
+  /* background-color: red; */
+}
+
+#page2 .elem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scale: 1;
+  border-radius: 2%;
+}
+
+.elem .dets {
+  height: 50px;
+  width: 303px;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: coral;
+  border-radius: 25px;
+}
+
+.elem .dets:hover {
+  height: 240px;
+  transform: translate(-50%, -10%);
+}
+#page3 {
+  min-height: 120vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+}
+.child {
+  height: 55vh;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.child img {
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  #nav {
+    padding: 15px;
+  }
+
+  #nav-part1 {
+    height: 68px;
+    width: 80px;
+  }
+  #nav-part1 svg {
+    display: block;
+    height: 67px;
+  }
+  #links {
+    display: none;
+  }
+  #icons {
+    padding: 7px;
+  }
+  #nav-part2 #icons i {
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 100;
+  }
+  #cursor {
+    scale: 0;
+    opacity: 0;
+  }
+  #page1 {
+    min-height: 70vh;
+    width: 100%;
+    padding: 0 3vw;
+    padding-top: 25vh;
+  }
+
+  #page1 h1 {
+    font-size: 16vw;
+    letter-spacing: -4px;
+  }
+
+  #video-container {
+    height: 25vh;
+    margin: 2vh auto;
+  }
+  #video-container #play {
+    padding: 9.5vw 7.5vw;
+    font-size: 4.5vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.77;
+    scale: 1;
+    transform: translate(-50%, -50%);
+  }
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    padding: 5vw 3vw;
+  }
+  #page2 .elem {
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 3vw;
+  }
+  #page3 {
+    min-height: 120vh;
+    width: 100%;
+  }
+  .child {
+    height: 54vh;
+    width: 88vw;
+    display: flex;
+    padding: 15vw;
+  }
+}
